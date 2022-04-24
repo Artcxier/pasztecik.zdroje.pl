@@ -1,0 +1,129 @@
+
+html, body, div, a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+
+
+body {
+  font-family: "Unica One";
+  font-size: 1.5em;
+  background: #f2f2f2;
+  text-shadow: 0 1px 0 white; }
+
+.italic { font-style: italic; }
+.small { font-size: 0.8em; }
+
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+  /* Default to hidden */
+  display: none;
+
+  /* Overlay entire screen */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  /* A bit of padding around image */
+  padding: 1em;
+
+  /* Translucent background */
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
+  display: block;
+}
+
+.lightbox span {
+  /* Full width and height */
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  /* Size and position background image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.nav {
+  text-align: center;
+  overflow: hidden;
+  margin: 2em auto;
+  width: 480px;
+  position: relative; }
+  .nav a {
+    display: block;
+    position: relative;
+    float: left;
+    padding: 1em 0 2em;
+    width: 25%;
+    text-decoration: none;
+    color: #393939;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -o-transition: .7s;
+    -ms-transition: .7s;
+    transition: .7s; }
+    .nav a:hover {
+      color: #c6342e; }
+
+.effect {
+  position: absolute;
+  left: -12.5%;
+  -webkit-transition: 0.7s ease-in-out;
+  -moz-transition: 0.7s ease-in-out;
+  -o-transition: 0.7s ease-in-out;
+  -ms-transition: 0.7s ease-in-out;
+  transition: 0.7s ease-in-out; }
+
+  .nav a:nth-child(1):hover ~ .effect {
+    left: 12.5%; }
+  .nav a:nth-child(2):hover ~ .effect {
+    left: 37.5%; }
+  .nav a:nth-child(3):hover ~ .effect {
+    left: 62.5%; }
+  .nav a:nth-child(4):hover ~ .effect {
+    left: 87.5%; }
+
+/* ----- line example -----*/
+
+.ph-line-nav .effect {
+  width: 90px;
+  height: 2px;
+  bottom: 36px;
+  background: #c6342e;
+  box-shadow: 0 1px 0 white; 
+  margin-left:-45px;
+}
+
+p {
+  margin: 1.5em 0;
+  color: #aaa;
+}
+
+img {
+  max-height: 50vh;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #bbb;
+}
+
